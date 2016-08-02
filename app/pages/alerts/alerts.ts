@@ -53,4 +53,26 @@ export class AlertsPage {
     });
     this.nav .present(prompt);
   }
+
+  doAlertConfirm() {
+    let confirm = Alert.create({
+      title: 'Title',
+      message: 'Ask a question',
+      buttons: [
+        {
+          text: 'Disagree',
+          handler: () => {
+            console.log('Disagree Clicked!');
+          }          
+        },
+        {
+          text: 'Agree',
+          handler: () => {
+            console.log('Agree Clicked!');
+          }
+        }
+      ]
+    });
+    this.nav .present(confirm);
+  }
 }
