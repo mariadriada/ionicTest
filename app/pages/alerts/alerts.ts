@@ -25,4 +25,32 @@ export class AlertsPage {
     });
     this.nav .present(alert);
     }
+
+  doAlertPropmt() {
+    let prompt = Alert.create({
+      title: "login",
+      message: "Enter a text",
+      inputs: [
+        {
+          name: 'title',
+          placeholder: 'Title'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {
+            console.log('Cancel Clicked!');
+          }
+        },
+        {
+          text: 'Save',
+          handler: data => {
+            console.log('Saved clicked!');
+          }
+        }
+      ] 
+    });
+    this.nav .present(prompt);
+  }
 }
