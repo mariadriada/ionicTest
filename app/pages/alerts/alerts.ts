@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Alert } from 'ionic-angular';
+import { Alert, RadioButton } from 'ionic-angular';
 
 /*
   Generated class for the AlertsPage page.
@@ -74,5 +74,34 @@ export class AlertsPage {
       ]
     });
     this.nav .present(confirm);
+  }
+
+  doRadio() {
+    let alert = Alert.create({
+      title:'title',     
+      /*inputs: [
+        type: 'radio',
+        label: 'Blue',
+        value: 'blue'
+        checked: true
+      ]*/
+    });
+
+    alert.addInput({
+      type: 'radio',
+      label: 'Blue',
+      value: 'blue',
+      checked: true
+    });
+    
+    alert.addButton('Cancel');
+    alert.addButton({
+      text: 'Ok',
+      /*handler: data => {
+        this.testRadioOpen = false;
+        this.testRadioResult = data;
+      }*/
+    });
+    this.nav .present(alert);
   }
 }
