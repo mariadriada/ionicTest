@@ -77,30 +77,30 @@ export class AlertsPage {
   }
 
   doRadio() {
-    let alert = Alert.create({
-      title:'title',     
-      /*inputs: [
-        type: 'radio',
-        label: 'Blue',
-        value: 'blue'
-        checked: true
-      ]*/
-    });
+    let alert = Alert.create();
+    alert.setTitle('Alert with radio button');
+    alert.setMessage('Select a color');
 
     alert.addInput({
       type: 'radio',
       label: 'Blue',
       value: 'blue',
-      checked: true
+      checked: false
+    });
+
+   alert.addInput({
+      type: 'radio',
+      label: 'Red',
+      value: 'red',
+      checked: false
     });
     
     alert.addButton('Cancel');
     alert.addButton({
       text: 'Ok',
-      /*handler: data => {
-        this.testRadioOpen = false;
-        this.testRadioResult = data;
-      }*/
+      handler: data  => {     
+        console.log('ok');
+      }
     });
     this.nav .present(alert);
   }
