@@ -99,7 +99,35 @@ export class AlertsPage {
     alert.addButton({
       text: 'Ok',
       handler: data  => {     
-        console.log('ok');
+        console.log('ok', data);
+      }
+    });
+    this.nav .present(alert);
+  };
+
+  doCheckbox() {
+    let alert = Alert.create();
+    alert.setTitle('Alert title');
+
+    alert.addInput({
+      type: 'checkbox',
+      label: 'checkbox label',
+      value: 'checkbox value',
+      checked: false
+    });
+
+    alert.addInput({
+      type: 'checkbox',
+      label: 'checkbox 2 label',
+      value: 'checkbox 2 value ',
+      checked: false
+    });
+
+    alert.addButton('Cancel');
+    alert.addButton({
+      text: 'Ok',
+      handler: data => {
+        console.log('checkbox data: ', data);        
       }
     });
     this.nav .present(alert);
