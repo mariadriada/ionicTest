@@ -1,0 +1,21 @@
+.badges {
+    background-color: lemonchiffon;   
+    display: block;
+    font-size:62.5%;
+
+    ion-item {
+        background-color: wheat;        
+        border-radius: 3rem;
+        margin: 1rem 0 0 0; 
+
+         ion-badge {
+              background-color: white;
+              border-radius: 3rem;
+              border: 0.1rem solid black;
+              color: black;
+              font-size:1.6rem;
+              height: 4rem;
+              line-height: 4rem;              
+        }
+    }   
+}
