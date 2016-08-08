@@ -1,0 +1,15 @@
+.buttons {
+   .default-buttons{
+        background-color: silver;
+        min-height: 20rem;
+        max-height: 30rem;
+        margin: 5rem 1rem 0 0;
+        width: 30%;
+        float: left; 
+
+        scroll-content{
+            margin-top: 0 !important;
+            overflow: hidden;           
+        }     
+   }   
+}
