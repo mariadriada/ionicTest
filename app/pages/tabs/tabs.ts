@@ -5,6 +5,9 @@ import {ContactPage} from '../contact/contact';
 import {ActionSheetsPage} from '../action-sheets/action-sheets';
 import {AlertsPage} from '../alerts/alerts';
 import {BadgesPage} from '../badges/badges';
+import {ButtonsPage} from '../buttons/buttons';
+
+
 
 @Component({
   templateUrl: 'build/pages/tabs/tabs.html'
@@ -17,6 +20,7 @@ export class TabsPage {
   private tab4Root: any;
   private tab5Root: any;
   private tab6Root: any;
+  private tab7Root: any;
 
   constructor() {
     // this tells the tabs component which Pages
@@ -27,5 +31,6 @@ export class TabsPage {
     this.tab4Root = ActionSheetsPage;
     this.tab5Root = AlertsPage;
     this.tab6Root = BadgesPage;
+    this.tab7Root = ButtonsPage;
   }
 }
