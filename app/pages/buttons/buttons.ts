@@ -16,4 +16,11 @@ export class ButtonsPage {
 
   }
 
+  //Show icons list available
+  doIconsStyle() {
+    console.log('icon style');
+    window.location.href = "http://ionicframework.com/docs/v2/ionicons/";    
+   console.log('icon otra');  
+}
+
 }
